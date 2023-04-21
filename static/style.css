@@ -173,3 +173,11 @@
 		width: 100%;
 		height: 100%;
 	} 
+	.code3{
+		background-image: url(../Imagen3.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center center;
+		width: 100%;
+		height: 100%;
+	} 

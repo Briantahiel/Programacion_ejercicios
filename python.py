@@ -13,16 +13,25 @@
 
 
 
-import datetime
+# import datetime
 
-fecha_actual = datetime.datetime.now()
-fecha = fecha_actual.strftime("%Y-%m-%d")
-hora = fecha_actual.strftime("%H:%M:%S")
+# fecha_actual = datetime.datetime.now()
+# fecha = fecha_actual.strftime("%Y-%m-%d")
+# hora = fecha_actual.strftime("%H:%M:%S")
 
-temp = float(input("Temperatura: "))
-mensaje = ("Temp: " + str(temp) + "°C " + fecha + hora)
-print(mensaje)
+# temp = float(input("Temperatura: "))
+# mensaje = ("Temp: " + str(temp) + "°C " + fecha + hora)
+# print(mensaje)
 
-
+count = 0
+num1 = int(input("Desde: "))
+num2 = int(input("Hasta: "))
+if(num1 < num2):
+   for i in range(num1, num2):  
+    if(i % 3 == 0):
+        count += 1
+    print("Hay " + str(count) + " múltiplos de 3.")  
+else:
+    print("Error!")  
 
 
