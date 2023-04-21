@@ -10,99 +10,124 @@
     
 </head>
 <body>
-        <!-- <div class="profile-card">
-            
-            <form method="POST" id="miForm">
-                <label>Primer número:</label>
-                <input type="number" name="num1" required autofocus>
-                <br>
-                <label>Segundo número:</label>
-                <input type="number" name="num2" required>
-                <br>
-                <input type="submit" value="Sumar">
-                </form>
-                {% if resultado is not none %}
-                    <p>El resultado es: {{ resultado }}</p>
-                {% endif %}
-            <form method="POST" id="miForm">
-                <input type="number" name="temp">
-                <input type="submit" name="temp_submit" value="Enviar Temperatura">
-            </form>
-                {% if mensaje %}
-                    <p>{{ mensaje }}</p>
-                {% endif %}
-            <form method="POST" id="miForm">
-                <label>Calcula la cantidad de multiplos de 3 entre rangos:</label>
-                <input type="number" name="range1">
-                <input type="number" name="range2">
-                <input type="submit" name="multiplo" value="Calcular">
-            </form>
-                {% if respuesta %}
-                    <p>{{ respuesta }}</p>
-                {% endif %}
-        
-        
-        </div> -->
-        
-        <div class="card" id="card">
-            <div class="card-back">
-                <div class="line-numbers">
-                    <div>1</div>
-                    <div>2</div>
-                    <div>3</div>
-                    <div>4</div>
-                    <div>5</div>
-                    <div>6</div>
-                    <div>7</div>
-                    <div>8</div>
-                    <div>9</div>
-                </div>
-                <code>
-                        <label>1° Número:</label>
-                        <input type="number" id="num1" required autofocus>
-                        <br>
-                        <label>2° Número:</label>
-                        <input type="number" id="num2" required>
-                        <br>
-                        <button class="button-submit" type="submit" onclick="sum()">Suma</button>
-                        <p id="result">Respuesta</p>
-                </code>
+    <div class="cointaner-card">
+    <div class="card" id="card">
+        <div class="card-back">
+            <div class="line-numbers">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
             </div>
-            <div class="card-front">
-                <div class="line-numbers">
-                    <div>1</div>
-                    <div>2</div>
-                    <div>3</div>
-                    <div>4</div>
-                    <div>5</div>
-                    <div>6</div>
-                    <div>7</div>
-                    <div>8</div>
-                    <div>9</div>
-                </div>
-                <code class="code">
-                    <!-- <img src="../Imagen1.png"/> -->
-                    <!-- <img src="../Imagen1.png"/> -->
-                    <!-- <span class="variable">this</span>
-                    <span>.</span>
-                    <span class="method">addEventListener</span>
-                    <span>(</span>
-                    <span class="string">'mouseover'</span>
-                    <span>,</span> 
-                    <span class="function">() => 
-                    <span>{ 
-                        <span class="indent">
-                            <span class="variable">this</span>
-                            <span>.</span>
-                            <span class="property">flipCard</span>
-                            <span>=</span>
-                            <span class="boolean">true</span>
-                            <span>;</span>
-                        </span>
-                    <span>});</span> -->
-                </code>
+            <code>
+                <label>1° Número:</label>
+                <input type="number" id="num1" required autofocus>
+                <br>
+                <label>2° Número:</label>
+                <input type="number" id="num2" required>
+                <br>
+                <button class="button-submit" type="submit" onclick="sum()">Suma</button>
+                <p id="result">Respuesta</p>
+            </code>
+        </div>
+        <div class="card-front code1">
+            <div class="line-numbers">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
             </div>
         </div>
+    </div>
+    <!-- ///////////////// -->
+
+    <div class="card" id="card">
+        <div class="card-back">
+            <div class="line-numbers">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+            </div>
+            <code>
+                <label>Temperatura</label>
+                <input type="number" id="temp" required autofocus>
+                <br>
+                <button class="button-submit" type="submit" onclick="temp()">Enviar</button>
+                <p id="resultado">Respuesta</p>
+            </code>
+        </div>
+        <div class="card-front code2">
+            <div class="line-numbers">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ///////////////// -->
+
+    <div class="card" id="card">
+        <div class="card-back">
+            <div class="line-numbers">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+            </div>
+            <code>
+                <label>Rango de:</label>
+                <input type="number" id="rango1" required autofocus>
+                <br>
+                <label>a:</label>
+                <input type="number" id="rango2" required>
+                <br>
+                <button class="button-submit" type="submit" onclick="multiplo()">Calcular</button>
+                <p id="resultado">Respuesta</p>
+            </code>
+        </div>
+        <div class="card-front code3">
+            <div class="line-numbers">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="../static/script.js"></script>
 </body>
 </html>
