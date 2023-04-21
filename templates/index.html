@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet"  type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="../static/style.css">
     <title>Sumar números</title>
     
 </head>
@@ -43,7 +44,7 @@
         
         </div> -->
         
-        <div class="card">
+        <div class="card" id="card">
             <div class="card-back">
                 <div class="line-numbers">
                     <div>1</div>
@@ -57,52 +58,14 @@
                     <div>9</div>
                 </div>
                 <code>
-                    <form method="POST" id="miForm">
-                        <label>Primer número:</label>
-                        <input type="number" name="num1" required autofocus>
+                        <label>1° Número:</label>
+                        <input type="number" id="num1" required autofocus>
                         <br>
-                        <label>Segundo número:</label>
-                        <input type="number" name="num2" required>
+                        <label>2° Número:</label>
+                        <input type="number" id="num2" required>
                         <br>
-                        <input type="submit" value="Sumar">
-                        </form>
-                        {% if resultado is not none %}
-                            <p>El resultado es: {{ resultado }}</p>
-                        {% endif %}
-                    <!-- <span class="variable">const</span> 
-                    <span class="function">aboutMe</span> 
-                    <span class="operator">=</span> 
-                    <span>{
-                        <span class="indent">
-                            <span class="property">name</span>
-                            <span class="operator">:</span> 
-                            <span class="string">'Joshua Ward'</span>
-                            <span>,</span>
-                        </span>
-                        <span class="indent">
-                            <span class="property">title</span>
-                            <span class="operator">:</span> 
-                            <span class="string">'Sr. UI/UX Developer'</span>
-                            <span>,</span>
-                        </span>
-                        <span class="indent">
-                            <span class="property">contact</span>
-                            <span class="operator">:</span> 
-                            <span>{
-                                <span class="indent">
-                                    <span class="property">email</span>
-                                    <span class="operator">:</span> 
-                                    <span class="string">'joshua.ward@me.com'</span>
-                                    <span>,</span>
-                                </span>
-                                <span class="indent">
-                                    <span class="property">website</span>
-                                    <span class="operator">:</span> 
-                                    <span class="string">'joshuaward.me'</span>
-                                </span>
-                            </span>
-                        </span>
-                    <span>}</span> -->
+                        <button class="button-submit" type="submit" onclick="sum()">Suma</button>
+                        <p id="result">Respuesta</p>
                 </code>
             </div>
             <div class="card-front">
@@ -117,8 +80,10 @@
                     <div>8</div>
                     <div>9</div>
                 </div>
-                <code>
-                    <span class="variable">this</span>
+                <code class="code">
+                    <!-- <img src="../Imagen1.png"/> -->
+                    <!-- <img src="../Imagen1.png"/> -->
+                    <!-- <span class="variable">this</span>
                     <span>.</span>
                     <span class="method">addEventListener</span>
                     <span>(</span>
@@ -134,10 +99,10 @@
                             <span class="boolean">true</span>
                             <span>;</span>
                         </span>
-                    <span>});</span>
+                    <span>});</span> -->
                 </code>
             </div>
         </div>
-      
+<script src="../static/script.js"></script>
 </body>
 </html>
