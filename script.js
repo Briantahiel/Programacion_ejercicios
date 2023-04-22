@@ -7,15 +7,25 @@ function sum() {
   }
 }
 
+let list_temp = [];
 function temp(){
   let fechaActual = new Date();
   let fechaISO = fechaActual.toISOString(); 
   let fecha = fechaISO.slice(0, 10);
   let hora = fechaActual.toLocaleTimeString("es-AR");
-  let temp = parseFloat(document.getElementById('temp').value);
-  if(temp){
-    document.getElementById("resultado").textContent = "Temp: " + temp + "°C " + fecha + hora;
+  let temp = document.getElementById('temp').value;
+  
+  if(!isNaN(temp)){
+    list_temp.push(parseFloat(temp))
   }
+  else{
+    document.getElementById("resultado").textContent = "Ingrese un valor numérico válido.";
+  }
+  if(temp.toLowerCase() == 'parar'){
+    let temp_max = Math.max(...list_temp)
+    document.getElementById("resultado").textContent = "Temp máx: " + temp_max + "°C " + fecha + hora;
+  }
+  
 }
 
 function multiplo(){
@@ -34,3 +44,20 @@ function multiplo(){
   }
 }
 
+
+let provincias = ["Buenos Aires","Córdoba",
+"Santa Fe","Mendoza","Tucumán","Entre Ríos","Salta","Chaco","Corrientes"
+,"Misiones","San Juan","Jujuy","Río Negro","Neuquén","Formosa","Chubut"
+,"San Luis","La Rioja", "Santiago del Estero","Catamarca","La Pampa","Santa Cruz","Tierra del Fuego"];
+let elegida = ''
+function eleccion(){
+  let num = document.getElementById("numero").value.trim() - 1;
+  if(!isNaN(num) && num >= 0 && num <= 23){
+    elegida = provincias[num]
+    document.getElementById("provincia").textContent = elegida;
+  }
+  else{
+    document.getElementById("provincia").textContent = "Ingresa un número válido";
+  }
+}
+    
