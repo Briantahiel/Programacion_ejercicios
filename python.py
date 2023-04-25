@@ -77,6 +77,30 @@
 # print(float(inicio_carrera) - float(hora))
 
 
+# 4. En una carrera de bicicletas hay 35 corredores, por cada vuelta se toma el
+# nombre del corredor, el puesto en el que está en ese momento y el tiempo que
+# tardó en dar la vuelta, la carrera es a 50 vueltas, tomar mejor vuelta y que
+# corredor la hizo.
+
+# import time
+# corredores = []
+# vuelta = 1
+# inicio_carrera = time.time()
+# hora = time.strftime("%H:%M:%S")
+# print(f"La carrera ha iniciado en {hora}")
+
+# # while vuelta <= 3:
+#     # print(f"\nVuelta {vuelta}")
+# for corredor in range(1, 3):
+#     nombre = input("Nombre: ")
+#     tiempo_vuelta =  inicio_carrera
+#     corredores.append({vuelta, nombre, tiempo_vuelta})
+#     while vuelta <= 3:
+#         if nombre in corredores:
+#             corredores.append({vuelta, nombre, tiempo_vuelta})
+#     vuelta += 1
+
+# print(corredores)
 import time
 
 corredores = []
@@ -85,31 +109,18 @@ inicio_carrera = time.time()
 hora = time.strftime("%H:%M:%S")
 print(f"La carrera ha iniciado en {hora}")
 
-while vuelta <= 6:
-    # print(f"\nVuelta {vuelta}")
-    for i in range(1, 6):
-        corredor = input("Nombre: ")
+while vuelta <= 3:
+    print(f"\nVuelta {vuelta}")
+    for corredor in range(1, 3):
+        nombre = input("Nombre: ")
         tiempo_vuelta = time.time() - inicio_carrera
-        corredores.append({corredor: {vuelta: inicio_carrera}})
-        break
-    encontrado = False
-    for cor in corredores:
-        if corredor in cor:
-            vuelta += 1
-            encontrado = True
-        #         break
-        # if not encontrado:
-        #     for cor in corredores:
-        #         if corredor in cor:
-        #             cor[corredor][vuelta] = tiempo_vuelta
-        #             encontrado = True
-        #             break
-        #     if not encontrado:
-        #         corredores.append({corredor: {vuelta: tiempo_vuelta}})
-        # print(corredores)
-    vuelta += 1        
-print(corredores)
+        corredores.append({"nombre": nombre, "vuelta": vuelta, "tiempo": tiempo_vuelta})
+     
+    mejor_tiempo_vuelta = min([corredor["tiempo"] for corredor in corredores if corredor["vuelta"] == vuelta])
+    print("Mejor tiempo para la vuelta {}: {}: {}".format(nombre, vuelta, mejor_tiempo_vuelta))
+    vuelta += 1
 
+print(corredores)
 
 
 
