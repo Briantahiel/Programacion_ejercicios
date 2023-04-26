@@ -101,47 +101,27 @@
 #     vuelta += 1
 
 # print(corredores)
-import time
+# import time
 
-corredores = []
-vuelta = 1
-inicio_carrera = time.time()
-hora = time.strftime("%H:%M:%S")
-print(f"La carrera ha iniciado en {inicio_carrera}")
+# corredores = []
+# vuelta = 1
+# inicio_carrera = time.time()
+# hora = time.strftime("%H:%M:%S")
+# print(f"La carrera ha iniciado en {inicio_carrera}")
 
-while vuelta <= 50:
-    print(f"\nVuelta {vuelta}")
-    for corredor in range(1, 36):
-        # nombre = input("Nombre: ")
-        tiempo_vuelta = time.time() - inicio_carrera
-        corredores.append({"nombre": nombre, "vuelta": vuelta, "tiempo": tiempo_vuelta})
+# while vuelta <= 50:
+#     print(f"\nVuelta {vuelta}")
+#     for corredor in range(1, 36):
+#         nombre = input("Nombre: ")
+#         tiempo_vuelta = time.time() - inicio_carrera
+#         corredores.append({"nombre": nombre, "vuelta": vuelta, "tiempo": tiempo_vuelta})
      
-    mejor_tiempo_vuelta = min([corredor["tiempo"] for corredor in corredores if corredor["vuelta"] == vuelta])
-    nombre_mejor_tiempo = [corredor["nombre"] for corredor in corredores if corredor["tiempo"] == mejor_tiempo_vuelta][0]
-    print("Mejor tiempo para la vuelta", vuelta, nombre_mejor_tiempo, mejor_tiempo_vuelta)
+#     mejor_tiempo_vuelta = min([corredor["tiempo"] for corredor in corredores if corredor["vuelta"] == vuelta])
+#     nombre_mejor_tiempo = [corredor["nombre"] for corredor in corredores if corredor["tiempo"] == mejor_tiempo_vuelta][0]
+#     print("Mejor tiempo para la vuelta", vuelta, nombre_mejor_tiempo, mejor_tiempo_vuelta)
 
-    vuelta += 1
+#     vuelta += 1
 
-print(corredores)
-
-
-
-
-# for i in range(1, 4):
-#     corredor = input("Ingrese nombre del corredor: ")
-
-#     encontrado = False
-#     for dic in corredores:
-#         if corredor in dic:
-#             tiempo_vuelta = time.time() - inicio_carrera
-#             dic[corredor][vuelta] = tiempo_vuelta
-#             vuelta += 1
-#             encontrado = True
-#             break
-#     if not encontrado:
-#         corredores.append({corredor: {vuelta: time.time() - inicio_carrera}})
-    
-   
 # print(corredores)
 
 
