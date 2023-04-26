@@ -62,38 +62,32 @@
 // }
     
 
-let corredores = [];
-let vuelta = 1;
-let inicio_carrera = Date.now();
-let hora = new Date().toLocaleTimeString();
-console.log(`La carrera ha iniciado en ${inicio_carrera}`);
+// let corredores = [];
+// let vuelta = 1;
+// let inicio_carrera = Date.now();
+// let hora = new Date().toLocaleTimeString();
+// console.log(`La carrera ha iniciado en ${inicio_carrera}`);
 
-while (vuelta <= 3) {
-  console.log(`\nVuelta ${vuelta}`);
-  for (let corredor = 1; corredor <= 2; corredor++) {
-    let nombre = prompt("Nombre: ");
-    let tiempo_vuelta = Date.now() - inicio_carrera;
-    corredores.push({nombre: nombre, vuelta: vuelta, tiempo: tiempo_vuelta});
-  }
+// while (vuelta <= 3) {
+//   console.log(`\nVuelta ${vuelta}`);
+//   for (let corredor = 1; corredor <= 2; corredor++) {
+//     let nombre = prompt("Nombre: ");
+//     let tiempo_vuelta = Date.now() - inicio_carrera;
+//     corredores.push({nombre: nombre, vuelta: vuelta, tiempo: tiempo_vuelta});
+//   }
   
-  let tiempos_vuelta = corredores.filter(corredor => corredor.vuelta === vuelta).map(corredor => corredor.tiempo);
-  console.log(tiempos_vuelta)
-  let mejor_tiempo_vuelta = Math.min(...tiempos_vuelta);
-  let nombre_mejor_tiempo = corredores.find(corredor => corredor.tiempo === mejor_tiempo_vuelta).nombre;
-  console.log(`Mejor tiempo para la vuelta ${vuelta}: ${nombre_mejor_tiempo} ${mejor_tiempo_vuelta}`);
+//   let tiempos_vuelta = corredores.filter(corredor => corredor.vuelta === vuelta).map(corredor => corredor.tiempo);
+//   console.log(tiempos_vuelta)
+//   let mejor_tiempo_vuelta = Math.min(...tiempos_vuelta);
+//   let nombre_mejor_tiempo = corredores.find(corredor => corredor.tiempo === mejor_tiempo_vuelta).nombre;
+//   console.log(`Mejor tiempo para la vuelta ${vuelta}: ${nombre_mejor_tiempo} ${mejor_tiempo_vuelta}`);
 
-  vuelta++;
-}
+//   vuelta++;
+// }
 
-console.log(corredores);
+// console.log(corredores);
 
 
 
-     
-    // mejor_tiempo_vuelta = min([corredor["tiempo"] for corredor in corredores if corredor["vuelta"] == vuelta])
-    // nombre_mejor_tiempo = [corredor["nombre"] for corredor in corredores if corredor["tiempo"] == mejor_tiempo_vuelta][0]
-    // print("Mejor tiempo para la vuelta", vuelta, nombre_mejor_tiempo, mejor_tiempo_vuelta)
-
-    // vuelta += 1
 
 
