@@ -109,10 +109,10 @@ inicio_carrera = time.time()
 hora = time.strftime("%H:%M:%S")
 print(f"La carrera ha iniciado en {inicio_carrera}")
 
-while vuelta <= 3:
+while vuelta <= 50:
     print(f"\nVuelta {vuelta}")
-    for corredor in range(1, 3):
-        nombre = input("Nombre: ")
+    for corredor in range(1, 36):
+        # nombre = input("Nombre: ")
         tiempo_vuelta = time.time() - inicio_carrera
         corredores.append({"nombre": nombre, "vuelta": vuelta, "tiempo": tiempo_vuelta})
      
