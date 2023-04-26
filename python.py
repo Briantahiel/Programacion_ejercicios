@@ -107,7 +107,7 @@ corredores = []
 vuelta = 1
 inicio_carrera = time.time()
 hora = time.strftime("%H:%M:%S")
-print(f"La carrera ha iniciado en {hora}")
+print(f"La carrera ha iniciado en {inicio_carrera}")
 
 while vuelta <= 3:
     print(f"\nVuelta {vuelta}")
@@ -117,7 +117,9 @@ while vuelta <= 3:
         corredores.append({"nombre": nombre, "vuelta": vuelta, "tiempo": tiempo_vuelta})
      
     mejor_tiempo_vuelta = min([corredor["tiempo"] for corredor in corredores if corredor["vuelta"] == vuelta])
-    print("Mejor tiempo para la vuelta {}: {}: {}".format(nombre, vuelta, mejor_tiempo_vuelta))
+    nombre_mejor_tiempo = [corredor["nombre"] for corredor in corredores if corredor["tiempo"] == mejor_tiempo_vuelta][0]
+    print("Mejor tiempo para la vuelta", vuelta, nombre_mejor_tiempo, mejor_tiempo_vuelta)
+
     vuelta += 1
 
 print(corredores)
