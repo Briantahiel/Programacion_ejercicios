@@ -1,6 +1,3 @@
-
-
-
 # 4. En una carrera de bicicletas hay 35 corredores, por cada vuelta se toma el
 # nombre del corredor, el puesto en el que está en ese momento y el tiempo que
 # tardó en dar la vuelta, la carrera es a 50 vueltas, tomar mejor vuelta y que
