@@ -5,6 +5,7 @@ function sum() {
     let result = num1 + num2;
     document.getElementById("result").textContent = "La suma es: " + result;
   }
+
 }
 
 let list_temp = [];
@@ -24,9 +25,8 @@ function temp(){
     let temp_max = Math.max(...list_temp)
     document.getElementById("resultado").textContent = "Temp máx: " + temp_max + "°C " + fecha + hora;
   }
+
 }
-
-
 
 function multiplo(){
   let rango1 = parseFloat(document.getElementById("rango1").value);
@@ -60,8 +60,7 @@ function eleccion(){
   else{
     document.getElementById("provincia").textContent = "Ingresa un número válido";
   }
-}
-    
+}   
 
 // let corredores = [];
 // let vuelta = 1;
@@ -87,8 +86,5 @@ function eleccion(){
 // }
 
 // console.log(corredores);
-
-
-
 
 
