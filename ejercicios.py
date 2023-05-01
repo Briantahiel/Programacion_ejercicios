@@ -1,3 +1,7 @@
+# Consigna: aplicar al código un
+# while para poder salir del programa cuando el
+# operador lo disponga. While true
+
 colores = ["Rojo", "Negro", "Blanco"]
 
 while True:
