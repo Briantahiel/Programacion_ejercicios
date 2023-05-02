@@ -112,3 +112,17 @@ edad = fecha_actual.year - fecha_nacimiento.year - ((fecha_actual.month, fecha_a
 # Imprimir la edad
 print("La edad es:", edad, "años")
 
+import datetime
+
+# Pedir al usuario su fecha de nacimiento en formato 'dd/mm/aaaa'
+fecha_nacimiento_str = input("Ingrese su fecha de nacimiento (dd/mm/aaaa): ")
+
+# Convertir la cadena de entrada en un objeto de fecha
+fecha_nacimiento = datetime.datetime.strptime(fecha_nacimiento_str, '%d/%m/%Y').date()
+
+# Calcular la edad en años
+fecha_actual = datetime.date.today()
+edad = fecha_actual.year - fecha_nacimiento.year - ((fecha_actual.month, fecha_actual.day) < (fecha_nacimiento.month, fecha_nacimiento.day))
+
+# Imprimir la edad
+print("Su edad es:", edad, "años")
