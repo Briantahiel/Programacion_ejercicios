@@ -126,3 +126,26 @@ edad = fecha_actual.year - fecha_nacimiento.year - ((fecha_actual.month, fecha_a
 
 # Imprimir la edad
 print("Su edad es:", edad, "años")
+
+
+import datetime
+# fecha = datetime.datetime.now()
+# fecha_actual = fecha.strftime("%y-%m-%d")
+# hora = fecha.strftime("%H:%M:%S")
+# print("La fecha actual es:", fecha_actual)
+# print("La hora es:", hora)
+
+while True:
+    try:
+        fecha_nac = input("Ingrese su fecha de nacimiento en formato dd/mm/aaaa: ")
+        fecha_nacimiento = datetime.datetime.strptime(fecha_nac, "%d/%m/%Y").date()
+        fecha_actual = datetime.date.today()
+        edad = fecha_actual.year - fecha_nacimiento.year - ((fecha_actual.month, fecha_actual.day) < (fecha_nacimiento.month, fecha_nacimiento.day))
+        if (fecha_nacimiento == fecha_actual):
+            print("Feliz cumpleaños")
+        else:
+            print("Usted tiene:", edad, "años")
+        
+    except ValueError:    
+        print("Ingrese un formato válido")
+        
