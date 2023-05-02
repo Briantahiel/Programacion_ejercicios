@@ -98,4 +98,17 @@ while True:
         print("Ingrese un número válido")
 
 
+import datetime
+
+# Fecha de nacimiento de ejemplo: 1 de enero de 1990
+fecha_nacimiento = datetime.date(1990, 1, 1)
+
+# Fecha actual
+fecha_actual = datetime.date.today()
+
+# Cálculo de la edad en años
+edad = fecha_actual.year - fecha_nacimiento.year - ((fecha_actual.month, fecha_actual.day) < (fecha_nacimiento.month, fecha_nacimiento.day))
+
+# Imprimir la edad
+print("La edad es:", edad, "años")
 
