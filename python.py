@@ -96,6 +96,3 @@ while True:
             print(eleccion)     
     except ValueError:
         print("Ingrese un número válido")
-
-
-
