@@ -10,6 +10,5 @@ while True:
             print("Feliz Cumpleaños!. Cumpliste", edad, "años")
         else:    
             print("Usted tiene:", edad, "años")
-        
     except ValueError:    
         print("Ingrese un formato válido")
