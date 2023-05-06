@@ -1,5 +1,4 @@
 import datetime
-
 while True:
     try:
         fecha_nac = input("Ingrese su fecha de nacimiento en formato dd/mm/aaaa: ")
